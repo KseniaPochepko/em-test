@@ -1,0 +1,14 @@
+require('ts-node/register');
+require('dotenv').config();
+const path = require('path');
+
+const fs = require('fs');
+
+const baseDir = fs.existsSync(path.resolve('src')) ? 'src' : 'dist';
+
+module.exports = {
+  config: path.resolve(`dist/config`, 'db.js'),
+  'models-path': path.resolve(`${baseDir}/db`, 'models'),
+  'seeders-path': path.resolve(`${baseDir}/db`, 'seeders'),
+  'migrations-path': path.resolve(`${baseDir}/db`, 'migrations'),
+};

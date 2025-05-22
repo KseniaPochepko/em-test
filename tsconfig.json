@@ -1,0 +1,59 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "sourceMap": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "strictPropertyInitialization": false,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "strictNullChecks": true,
+        "allowJs": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "importHelpers": true,
+        "useDefineForClassFields": false,
+        "target": "ES2017",
+        "lib": [
+            "es2017"
+        ],
+        "types": [
+            "node"
+        ],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": "./",
+        "paths": {
+            "@backend/*": [
+                "src/*"
+            ]
+        },
+        "plugins": [
+            {
+                "transform": "typescript-transform-paths"
+            },
+            {
+                "transform": "typescript-transform-paths",
+                "afterDeclarations": true
+            }
+        ],
+        "outDir": "dist",
+        "rootDir": "./src"
+    },
+    "include": [
+        "src/**/*",
+        "**/*.d.ts",
+        "**/*.spec.ts",
+        "**/*.test.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "tmp"
+    ],
+    "files": [
+        "global.d.ts"
+    ]
+}
